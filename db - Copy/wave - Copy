@@ -1,0 +1,44 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /Boolean/A
+add wave -noupdate /Boolean/B
+add wave -noupdate /Boolean/C
+add wave -noupdate /Boolean/D
+add wave -noupdate /Boolean/w
+add wave -noupdate /Boolean/x
+add wave -noupdate /Boolean/y
+add wave -noupdate /Boolean/z
+add wave -noupdate /Boolean/F1
+add wave -noupdate /Boolean/F2
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+quietly wave cursor active 0
+configure wave -namecolwidth 150
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ps
+update
+WaveRestoreZoom {0 ps} {1376 ps}
+view wave 
+wave clipboard store
+wave create -pattern none -portmode input -language vlog //Boolean/A 
+wave create -pattern none -portmode input -language vlog //Boolean/B 
+wave create -pattern none -portmode input -language vlog //Boolean/C 
+wave create -pattern none -portmode input -language vlog //Boolean/D 
+wave create -pattern none -portmode input -language vlog //Boolean/w 
+wave create -pattern none -portmode input -language vlog //Boolean/x 
+wave create -pattern none -portmode input -language vlog //Boolean/y 
+wave create -pattern none -portmode input -language vlog //Boolean/z 
+wave create -pattern none -portmode output -language vlog //Boolean/F1 
+wave create -pattern none -portmode output -language vlog //Boolean/F2 
+WaveCollapseAll -1
+wave clipboard restore
